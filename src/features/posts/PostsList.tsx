@@ -1,5 +1,6 @@
-import { useSelector } from 'react-redux'
+import { useSelector } from 'react-redux' // Import the `useSelector` hook from React Redux. This hook allows us to read values from the store state, and subscribe to updates to that state.
 
+// the difference between an interface and a type is that a type can be used to declare a primitive, union, or tuple, whereas an interface can only be used to declare an object type. 
 interface State {
   posts: {
     id: string

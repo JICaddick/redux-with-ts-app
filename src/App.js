@@ -5,7 +5,7 @@ import {
   Route,
   Link,
 } from "react-router-dom";
-import PostsList from './posts/PostsList'
+import PostsList from './features/posts/PostsList'
 import { Navbar } from './app/Navbar';
 
 function App() {
