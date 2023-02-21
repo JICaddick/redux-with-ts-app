@@ -3,39 +3,41 @@ import './App.css';
 import {  
   Routes, 
   Route,
-  Link
+  Link,
 } from "react-router-dom";
-// import { Navbar } from './app/Navbar.js'
-// import { PostsList } from './features/posts/PostsList.js';
-
-const About = () => <h1>About Page</h1>;
+import PostsList from './posts/PostsList'
 
 function App() {
   return (
     <div className="App">
       <h1>React Redux App</h1>
+      <div className="App">
         <nav>
           <ul>
             <li>
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/postsList">Posts</Link>
             </li>
-            {/* <li>
-              <Link to="/PostsList">PostsList</Link>
-            </li> */}
           </ul>
         </nav>
-      <Routes>
-        {/* <Navbar /> */}
+
+        <Routes>
+          <>
           <Route
             path="/"
-            exact component={App}
+            exact
+            element={<h1>Home</h1>}
           />
-        <Route path="/about" component={About} />
-        {/* <Route path="/PostsList" component={PostsList} /> */}
-      </Routes>
+          {/* DIS ROUTE RONG */}
+          <Route 
+            path="/postsList"
+            element={<PostsList />}
+          />
+          </>
+        </Routes>
+      </div>
     </div>
   );
 }

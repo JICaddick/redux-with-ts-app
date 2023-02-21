@@ -1,4 +1,3 @@
-import React from 'react'
 import { useSelector } from 'react-redux'
 
 interface State {
@@ -9,10 +8,9 @@ interface State {
   }[]
 }
 
-export const PostsList = () => {
-
+const PostsList = () => {
   const posts = useSelector((state: State) => state.posts)
-// FIX! Dis too, fix dis.
+
   const renderedPosts = posts.map(post => (
     <article className="post-excerpt" key={post.id}>
       <h3>{post.title}</h3>
@@ -27,3 +25,5 @@ export const PostsList = () => {
     </section>
   )
 }
+
+export default PostsList
