@@ -6,39 +6,28 @@ import {
   Link,
 } from "react-router-dom";
 import PostsList from './posts/PostsList'
+import { Navbar } from './app/Navbar';
 
 function App() {
   return (
+    <>
+    <Navbar />
     <div className="App">
-      <h1>React Redux App</h1>
       <div className="App">
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/postsList">Posts</Link>
-            </li>
-          </ul>
-        </nav>
-
         <Routes>
-          <>
           <Route
             path="/"
             exact
             element={<h1>Home</h1>}
           />
-          {/* DIS ROUTE RONG */}
           <Route 
             path="/postsList"
             element={<PostsList />}
           />
-          </>
         </Routes>
       </div>
     </div>
+    </>
   );
 }
 
