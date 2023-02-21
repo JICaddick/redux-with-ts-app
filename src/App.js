@@ -12,7 +12,6 @@ function App() {
   return (
     <>
     <Navbar />
-    <div className="App">
       <div className="App">
         <Routes>
           <Route
@@ -26,7 +25,6 @@ function App() {
           />
         </Routes>
       </div>
-    </div>
     </>
   );
 }
